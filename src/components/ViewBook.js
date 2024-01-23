@@ -3,13 +3,11 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { FetchBook } from "../features/bookSlice";
-import { useNavigate } from "react-router-dom";
 
 
 
 const ViewBook = () => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const book = useSelector((state) => state.app.book);
     const { id } = useParams();
     useEffect(() => {
@@ -18,15 +16,12 @@ const ViewBook = () => {
         // eslint-disable-next-line
       },[]);
     
-    const EditOnClick = () =>{
-        navigate("/editbook/" + id, { state: { id: id } });
-    }
 
   if(book!=null){
     return (
         <div className="row ">
           <div className="col-12  col-md-4">
-            <img id="titleimg" className="m-2  ms-5" src={book.cover_image} alt="cover image" /> 
+            <img id="titleimg" className="m-2  ms-5" src={book.cover_image} alt="book cover" /> 
           </div>
           <div className="col-12  col-md-8">
             <h1 className="m-3">Title : {book.title}</h1>

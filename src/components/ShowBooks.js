@@ -22,7 +22,10 @@ const ShowBooks = () => {
   };
 
   const DeleteOnClick = (book) => {
+    if(alert("Do you want to delete this book?")){
+      
     dispatch(DeleteBook(book));
+    }
   };
 
   useEffect(() => {
@@ -34,7 +37,7 @@ const ShowBooks = () => {
     console.log(booksStatus);
     return (
       <div className="container-fluid main ">
-        <h1 className="text-center">All books</h1>
+        <h1 className="text-center my-2" id="booksheading">All Books</h1>
         <div className="d-flex container-fluid flex-wrap justify-content-center ">
           {books.map((book) => (
             <div
@@ -65,16 +68,16 @@ const ShowBooks = () => {
                       <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
                     </svg>
                   </button>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <button className="dropdown-item btn" id={book.id}
+                  <ul className="dropdown-menu dropdown-menu-dark dm">
+                    <li className="di">
+                      <button className="dropdown-item btn " id={book.id}
                     onClick={() => ViewBookOnClick(book.id)}>View</button>
                     </li>
-                    <li>
-                      <button className="dropdown-item btn" onClick={() => EditOnClick(book.id)} >Edit</button>
-                    </li>
-                    <li>
-                      <button className="dropdown-item btn" onClick={() => DeleteOnClick({ book })}>Delete</button>
+                    <li className="di">
+                      <button className="dropdown-item btn di" onClick={() => EditOnClick(book.id)} >Edit</button>
+                    </li> 
+                    <li className="di">
+                      <button className="dropdown-item btn di" onClick={() => DeleteOnClick({ book })}>Delete</button>
                     </li>
                   </ul>
                 </div>
