@@ -1,38 +1,56 @@
 .App {
-  text-align: center;
+  height: 100% ;
+}
+#main{
+  height: 100% ;
+  background-color: #00a0a0;
+}
+.BookCard{
+  box-shadow: 5px 3px 20px gray ;
+}
+textarea{ 
+  resize: none !important;
+  height: 100px;
+}
+#formdiv{
+  width: 40% ;
+}
+label{
+  color: whitesmoke;
+  opacity: 90%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#addbookheading{
+  color: whitesmoke;
+  text-shadow:  1px 1px 7px gray ;
+}
+/* input, select, textarea{
+  box-shadow: 5px 5px 10px gray ;
+} */
+
+.inputs{
+  box-shadow: 5px 5px 10px gray ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#titleimg{
+  height: 500px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#threedots{
+  border: transparent !important;
 }
 
-.App-link {
-  color: #61dafb;
+.BookCardImage{
+  height: 300px;
+  width: 100%;
+  left: 0;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.BookCardImage:hover,.BookCardImage:focus{
+  height: 330px;
+  width: 110%;
+  transition: 0.3s ease;
+  left: -5%;
+  top: -5%;
 }
