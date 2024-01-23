@@ -13,6 +13,10 @@ const ShowBooks = () => {
     return state.app;
   });
 
+  const EditOnClick = (id) =>{
+    navigate("/editbook/" + id, { state: { id: id } });
+  }
+  
   const ViewBookOnClick = (id) => {
     navigate("/viewbook/" + id, { state: { id: id } });
   };
@@ -34,11 +38,11 @@ const ShowBooks = () => {
         <div className="d-flex container-fluid flex-wrap justify-content-center ">
           {books.map((book) => (
             <div
-              className="card BookCard m-3 border-1 border-info overflow-visible"
+              className="card BookCard m-3 border-1 border-info overflow-hidden"
               key={book.id}
               style={{ width: "250px" }}
             >
-              <div className="position-relative overflow-visible">
+              <div className="position-relative ">
                 <img
                   className="card-img-top BookCardImage"
                   src={book.cover_image}
@@ -67,10 +71,10 @@ const ShowBooks = () => {
                     onClick={() => ViewBookOnClick(book.id)}>View</button>
                     </li>
                     <li>
-                      <button className="dropdown-item btn" onClick={() => DeleteOnClick({ book })}>Edit</button>
+                      <button className="dropdown-item btn" onClick={() => EditOnClick(book.id)} >Edit</button>
                     </li>
                     <li>
-                      <button className="dropdown-item btn">Delete</button>
+                      <button className="dropdown-item btn" onClick={() => DeleteOnClick({ book })}>Delete</button>
                     </li>
                   </ul>
                 </div>

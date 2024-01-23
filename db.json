@@ -10,15 +10,6 @@
       "cover_image": "https://m.media-amazon.com/images/I/41j-s9fHJcL._SY445_SX342_.jpg"
     },
     {
-      "title": "Pride and Prejudice 2",
-      "author": "Jane Austen",
-      "publication_year": 1813,
-      "description": "A classic novel exploring themes of love, marriage, and social norms.",
-      "isbn": "9780141439518",
-      "cover_image": "https://m.media-amazon.com/images/I/61H3BvN-naL._AC_UF1000,1000_QL80_.jpg",
-      "id": 3
-    },
-    {
       "id": 4,
       "title": "The Great Gatsby",
       "author": "F. Scott Fitzgerald",

@@ -35,7 +35,6 @@ const ViewBook = () => {
             <h4 className="m-3">ISBN : {book.isbn} </h4>
             <h5 className="m-3">Description : {book.description}</h5>
             <div>
-            <button className="btn btn-dark m-3" onClick={() => EditOnClick()}>Edit</button>
           </div>
           </div>
         </div>
